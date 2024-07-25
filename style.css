@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif;
+}
+.banner{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px;
+    background: white;
+    transition: 0.5s;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 20px 100px;
+    justify-content:space-between;
+    align-items: center;
+}
+header .logo{
+    text-decoration: none;
+    color:#333;
+    font-size: 2em;
+    font-weight: 700;
+    transition: 0.5s;
+}
+header .logo span{
+    color:rgb(4, 176, 255);
+    font-size: 2em;
+    font-weight: bold;
+}
+header ul{
+    display: flex;
+    gap:40px;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2em;
+    transition: 0.5s;
+    color: #333;
+}
+.content{
+    position: relative;
+    max-width: 800px;   
+}
+.content h2{
+    font-size: 5.5em;
+    color:#333;
+    transition: 0.5s;
+}
+.content h3{
+    font-size: 3em;
+    color:rgb(4, 176, 255);
+    transition: 0.5s;
+}
+.content h2 span{
+    color:rgb(4, 176, 255);
+}
+.content h3 span{
+    
+    color:#333;
+}
+.content p{
+    font-size: 1.2em;
+    color:#666;
+    margin: 10px 0;
+}
+.content-about {
+  position: relative; /* Change from absolute to relative to prevent overlapping */
+  flex: 1 1 45%; /* Allows the content to shrink or grow and take up 45% of the width */
+  min-width: 300px; /* Ensures content-about doesn't get too small */
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  color: #333;
+  padding-right: 2%;
+  box-sizing: border-box; /* Includes padding and border in element's total width */
+}
+@media screen and (max-width: 768px) {
+  .outer {
+    flex-direction: column; /* Stacks the items vertically on smaller screens */
+    align-items: center; /* Centers the items */
+  }
+
+  .content-mod,
+  .content-about {
+    flex: 1 1 100%; /* Each takes full width on small screens */
+    max-width: 100%; /* Ensures the max width is 100% */
+  }
+}
+.container-time{
+    position:absolute;
+    width:100%;
+}
+.content button{
+    position:relative;
+    background: rgb(4, 176, 255);
+    color:#fff;
+    outline:none;
+    padding:15px 35px;
+    border: none;
+    font-size: 1.25em;
+    border-radius: 3px;
+}
+.dayNight{
+    position:absolute;
+    bottom: 25px;
+    left:50%;
+    width: 60px;
+    height: 60px;
+    background: #f0f0f0;
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    transition: 0.5s;
+}
+.banner.night {
+    background: #333;
+}
+.banner.night .dayNight{
+    color:#fff;
+    background: #444;
+}
+.banner.night header .logo,
+.banner.night .content h2,
+.banner.night .content h3 span,
+.banner.night .content p,
+.banner.night .content-about span,
+.banner.night header ul li a{
+    color: #fff;
+}
+
+
+  
+  .conatiner-time h2 {
+    margin: 5%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 100;
+  }
+  
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    width: 55vw;
+    margin: 5% auto;
+  }
+  
+  .timeline__event {
+    background: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    margin: 20px 0;
+    border-radius: 63px;
+    box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+      0 18px 36px -18px rgba(0, 0, 0, 0.3),
+      0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  }
+  
+  .timeline__event__title {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #9251ac;
+    letter-spacing: 1.5px;
+  }
+  
+  .timeline__event__content {
+    padding: 20px;
+  }
+  
+  .timeline__event__date {
+    color: #f6a4ec;
+    font-size: 1.5rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  
+  .timeline__event__icon {
+    border-radius: 8px 0 0 8px;
+    background: #9251ac;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-basis: 40%;
+    font-size: 2rem;
+    color: #fff;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .timeline__event__icon i {
+    position: absolute;
+    top: 50%;
+    left: -65px;
+    font-size: 2.5rem;
+    transform: translateY(-50%);
+  }
+  
+  .timeline__event__description {
+    flex-basis: 60%;
+  }
+  
+  .timeline__event:after {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background: #9251ac;
+    position: absolute;
+    top: 52%;
+    left: -3.5rem;
+    z-index: -1;
+  }
+  
+  .timeline__event:before {
+    content: "";
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    background: #f6a4ec;
+    border-radius: 100%;
+    left: -6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid #9251ac;
+  }
+  
+  .timeline__event--type2:before {
+    background: #87bbfe;
+    border-color: #555ac0;
+  }
+  
+  .timeline__event--type2:after {
+    background: #555ac0;
+  }
+  
+  .timeline__event--type2 .timeline__event__date {
+    color: #87bbfe;
+  }
+  
+  .timeline__event--type2 .timeline__event__icon {
+    background: #555ac0;
+    color: #fff;
+  }
+  
+  .timeline__event--type2 .timeline__event__title {
+    color: #555ac0;
+  }
+  
+  .timeline__event--type3:before {
+    background: #aff1b6;
+    border-color: #24b47e;
+  }
+  
+  .timeline__event--type3:after {
+    background: #24b47e;
+  }
+  
+  .timeline__event--type3 .timeline__event__date {
+    color: #aff1b6;
+  }
+  
+  .timeline__event--type3 .timeline__event__icon {
+    background: #24b47e;
+    color: #fff;
+  }
+  
+  .timeline__event--type3 .timeline__event__title {
+    color: #24b47e;
+  }
+  
+  .timeline__event:last-child:after {
+    content: none;
+  }
+  
+  @media (max-width: 80%) {
+    .timeline__event {
+      flex-direction: column;
+    }
+  
+    .timeline__event__icon {
+      border-radius: 4px 4px 0 0;
+    }
+  }
+.conatiner-time{
+    width:100%;
+}
+.italics{
+  font-style: italic !important;
+}
+.outer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  padding: 20px;
+}
+.content-mod {
+  flex: 1 1 45%;
+  min-width: 300px; 
+  box-sizing: border-box; 
+}
+
+/* General styling for the icons container */
+.icons-align {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center; 
+  width:100%;
+}
+
+/* Ensure images are displayed correctly */
+.icons-align img {
+  max-width: 60%; /* Adjust the size of the icons */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .icons-align {
+      flex-direction: column; /* Stack icons vertically */
+      align-items: center; /* Center items horizontally */
+  }
+
+  .icons-align img {
+      max-width: 60%; /* Optionally adjust size for smaller screens */
+  }
+}
